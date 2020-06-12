@@ -48,3 +48,18 @@ class LinkedList:
             prev = current
             current = next
         self.head = prev
+        # trying to get this to work recursively
+        # prev = None
+        # current = self.head
+
+        # if current is None:
+        #     return
+        # # list with 2 elements
+        # elif self.head.next_node is None:
+        #     return current
+        # else:
+        #     # here implement the recursive call
+
+        #     reversed = self.reverse_list(node)
+
+        #     return reversed
