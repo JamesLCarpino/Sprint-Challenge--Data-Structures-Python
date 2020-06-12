@@ -13,12 +13,25 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+# for name_1 in names_1:
+#     for name_2 in names_2:
+#         if name_1 == name_2:
+#             duplicates.append(name_1)
 
 # list()
+# using bstnode
+from binary_search_tree import BSTNode
+
+fasttree = BSTNode(names_1[0])
+# now insert the names in names_1 into
+for name_1 in names_1:
+    fasttree.insert(name_1)
+# if the BST contains a name in name_2 add to duplicates list
+for name_2 in names_2:
+    if fasttree.contains(name_2):
+        duplicates.append(name_2)
+
+# stupid fast gives 1 dictionary of the names that are duplicates
 # duplicates.append(str(list(set(names_1).intersection(set(names_2)))))
 
 
